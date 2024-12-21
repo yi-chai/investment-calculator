@@ -1,4 +1,4 @@
-import {Input, InputNumber, Typography} from "antd";
+import {InputNumber, Typography} from "antd";
 
 const {Title} = Typography;
 
@@ -10,7 +10,7 @@ export default function UserInput({input, onChangeInput}) {
                 <InputNumber
                     required
                     value={input.initialInvestment}
-                    onChange={(e) => onChangeInput("initialInvestment", e.target.value)}
+                    onChange={(e) => onChangeInput("initialInvestment", e)}
                     controls={false}
                 />
             </div>
@@ -19,7 +19,7 @@ export default function UserInput({input, onChangeInput}) {
                 <InputNumber
                     required
                     value={input.annualInvestment}
-                    onChange={(e) => onChangeInput("annualInvestment", e.target.value)}
+                    onChange={(e) => onChangeInput("annualInvestment", e)}
                     controls={false}
                 />
             </div>
@@ -28,7 +28,7 @@ export default function UserInput({input, onChangeInput}) {
                 <InputNumber
                     required
                     value={input.expectedReturn}
-                    onChange={(e) => onChangeInput("expectedReturn", e.target.value)}
+                    onChange={(e) => onChangeInput("expectedReturn", e)}
                     controls={false}
                 />
             </div>
@@ -37,7 +37,7 @@ export default function UserInput({input, onChangeInput}) {
                 <InputNumber
                     required
                     value={input.duration}
-                    onChange={(e) => onChangeInput("duration", e.target.value)}
+                    onChange={(e) => onChangeInput("duration", e)}
                     controls={false}
                 />
             </div>

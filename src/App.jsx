@@ -1,9 +1,9 @@
-import { useState } from "react";
+import {useState} from "react";
 
 import Header from "./components/Header";
 import UserInput from "./components/UserInput";
 import Results from "./components/Results.Jsx";
-import { Flex } from "antd";
+import {Flex} from "antd";
 
 function App() {
     const [userInput, setUserInput] = useState({
@@ -25,16 +25,14 @@ function App() {
     }
 
     return (
-        <>
-            <Flex vertical align="center">
-                <Header />
-                <UserInput input={userInput} onChangeInput={handleChange} />
-                {isInputValid && <Results input={userInput} />}
-                {!isInputValid && (
-                    <p className="center">Please enter a duration greater than zero.</p>
-                )}
-            </Flex>
-        </>
+        <Flex vertical align="center">
+            <Header/>
+            <UserInput input={userInput} onChangeInput={handleChange}/>
+            {isInputValid && <Results input={userInput}/>}
+            {!isInputValid && (
+                <p className="center">Please enter a duration greater than zero.</p>
+            )}
+        </Flex>
     );
 }
 
