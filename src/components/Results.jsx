@@ -61,7 +61,6 @@ export default function Results({input}) {
 
     return (
         <Table
-            style={{maxWidth: "50rem"}}
             columns={columns}
             dataSource={results}
             pagination={{position: ["bottomCenter"]}}
